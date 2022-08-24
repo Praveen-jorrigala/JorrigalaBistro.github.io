@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jorrigala Bistro</title>
-    <link rel = "icon" href = 
-      "images/restaurant-logo.png" 
-        type = "../image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
@@ -30,7 +27,7 @@
             </p>
           </div>
 
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -40,12 +37,12 @@
         
         <div id="collapsable-nav" class="collapse navbar-collapse">
            <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li class="visible-xs active">
+            <li id="navHomeButton" class="visible-xs active">
               <a href="index.html">
                 <span class="glyphicon glyphicon-home"></span> Home</a>
             </li>
-            <li>
-              <a href="menu-categories.html">
+            <li id="navMenuButton">
+              <a href="#" onclick="$dc.loadMenuCategories();">
                 <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
             </li>
             <li>
@@ -74,28 +71,7 @@
   </div>
   <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
 
-  <div id="main-content" class="container">
-    <div class="jumbotron">
-      <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
-    </div>
-
-    <div id="home-tiles" class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="menu-categories.html"><div id="menu-tile"><span>menu</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="single-category.html"><div id="specials-tile"><span>specials</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <a href="https://www.google.co.in/maps/place/Hyderabad,+Telangana/@17.3782013,78.0011856,10z/data=!4m11!1m5!2m4!1sRestaurants!5m1!6sgcid:chinese_restaurant!6e5!3m4!1s0x3bcb99daeaebd2c7:0xae93b78392bafbc2!8m2!3d17.3850437!4d78.4866714" target="_blank">
-          <div id="map-tile">
-            <iframe src="https://www.google.com/maps/embed?" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <span>map</span>
-          </div>
-        </a>
-      </div>
-    </div><!-- End of #home-tiles -->
-  </div><!-- End of #main-content -->
+  <div id="main-content" class="container"></div>
 
   <footer class="panel-footer">
     <div class="container">
@@ -109,9 +85,9 @@
         </section>
         <section id="address" class="col-sm-4">
           <span>Address:</span><br>
-          7105 Nizam Road<br>
-          Hyderabad, MD 503111
-          <p>* Delivery area within 3-4 miles, with minimum order of  ₹200 plus ₹30 charge for all deliveries.</p>
+          Panjagutta Road<br>
+          Hyderabad, PINCODE - 500082.
+          <p>* Delivery area within 3-4 miles, with minimum order of 200 plus 30 charge for all deliveries.</p>
           <hr class="visible-xs">
         </section>
         <section id="testimonials" class="col-sm-4">
@@ -126,6 +102,7 @@
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
